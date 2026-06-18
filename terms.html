@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyvo · Terms & Conditions</title>
+  <!-- Font Awesome for icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #fafafc;
+      color: #1e1e2a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- header / nav (same as home) ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      background: #2a2a3a;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(145deg, #1e1e2a, #3d3d5c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      color: #2c2c3e;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #6c5ce7;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-actions i {
+      font-size: 1.3rem;
+      color: #2c2c3e;
+      cursor: default;
+    }
+
+    .badge {
+      background: #6c5ce7;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 30px;
+      margin-left: -8px;
+      font-weight: 600;
+    }
+
+    /* ---------- terms hero / header ---------- */
+    .terms-header {
+      padding: 40px 0 20px;
+    }
+
+    .terms-header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .terms-header h1 i {
+      color: #6c5ce7;
+      font-size: 2.4rem;
+    }
+
+    .terms-header p {
+      color: #4a4a5e;
+      font-size: 1.1rem;
+      margin-top: 8px;
+      max-width: 700px;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, #e4e4ef, transparent);
+      margin: 20px 0 30px;
+    }
+
+    /* ---------- terms content (legal style) ---------- */
+    .terms-content {
+      background: white;
+      border-radius: 32px;
+      padding: 40px 48px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eeedf5;
+      margin-bottom: 50px;
+    }
+
+    .terms-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 2.2rem 0 0.8rem;
+      color: #1e1e2a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .terms-content h2 i {
+      color: #6c5ce7;
+      font-size: 1.3rem;
+      width: 32px;
+    }
+
+    .terms-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .terms-content p {
+      color: #3a3a4e;
+      margin-bottom: 1.2rem;
+      padding-left: 12px;
+      border-left: 3px solid transparent;
+      transition: 0.1s;
+    }
+
+    .terms-content ul {
+      margin: 0.8rem 0 1.5rem 2.2rem;
+      color: #3a3a4e;
+    }
+
+    .terms-content ul li {
+      margin-bottom: 0.5rem;
+      list-style-type: '✦ ';
+      padding-left: 8px;
+    }
+
+    .terms-content ul li::marker {
+      color: #6c5ce7;
+    }
+
+    .highlight-box {
+      background: #f6f4fe;
+      border-radius: 20px;
+      padding: 20px 28px;
+      margin: 24px 0;
+      border-left: 6px solid #6c5ce7;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .highlight-box i {
+      color: #6c5ce7;
+      margin-right: 10px;
+    }
+
+    .small-note {
+      font-size: 0.9rem;
+      color: #6e6e86;
+      margin-top: 20px;
+      border-top: 1px solid #edeef5;
+      padding-top: 24px;
+    }
+
+    /* ---------- footer ---------- */
+    .footer {
+      border-top: 1px solid #e4e4ef;
+      padding: 30px 0 20px;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #4f4f68;
+    }
+
+    .footer .brand-small {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.3px;
+      color: #1e1e2a;
+    }
+
+    .footer i {
+      margin: 0 8px;
+      font-size: 1.2rem;
+      color: #3d3d5c;
+    }
+
+    .footer a {
+      color: #4f4f68;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    .footer a:hover {
+      color: #6c5ce7;
+    }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .nav-actions {
+        justify-content: center;
+      }
+      .terms-content {
+        padding: 28px 20px;
+      }
+      .terms-header h1 {
+        font-size: 2.2rem;
+        flex-wrap: wrap;
+      }
+      .terms-content h2 {
+        font-size: 1.3rem;
+      }
+      .terms-content ul {
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- header (exactly same as home) -->
+    <header>
+      <nav class="navbar">
+        <div class="logo-area">
+          <div class="logo-icon">Z</div>
+          <span class="brand">Zyvo</span>
+        </div>
+        <div class="nav-links"><a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-actions">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge">3</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- terms page header -->
+    <div class="terms-header">
+      <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+      <p>Last updated: June 18, 2026 · These terms govern your use of the Zyvo platform and services.</p>
+    </div>
+    <div class="divider"></div>
+
+    <!-- main terms content -->
+    <div class="terms-content">
+
+      <h2><i class="fas fa-check-circle"></i> 1. Acceptance of Terms</h2>
+      <p>By accessing or using the Zyvo website, mobile app, or any related services (collectively, the “Platform”), you agree to be bound by these Terms & Conditions and our Privacy Policy. If you do not agree, please do not use the Platform.</p>
+
+      <h2><i class="fas fa-user-shield"></i> 2. Eligibility</h2>
+      <p>You must be at least 18 years old or have the consent of a parent or guardian to use our Platform. By using Zyvo, you represent that you have the legal capacity to enter into this agreement.</p>
+
+      <h2><i class="fas fa-shopping-cart"></i> 3. Orders & Payments</h2>
+      <p>All orders placed through Zyvo are subject to availability and confirmation. We reserve the right to refuse or cancel any order for reasons including but not limited to: stock limitations, pricing errors, or suspected fraud.</p>
+      <ul>
+        <li><strong>Pricing:</strong> All prices are in USD and exclude taxes and shipping unless stated.</li>
+        <li><strong>Payment:</strong> We accept major credit cards, PayPal, and other methods displayed at checkout.</li>
+        <li><strong>Order confirmation:</strong> A confirmation email will be sent once your order is placed.</li>
+      </ul>
+
+      <h2><i class="fas fa-truck"></i> 4. Shipping & Delivery</h2>
+      <p>We aim to process and ship orders within 2–3 business days. Delivery times vary based on location. Zyvo is not responsible for delays caused by carriers, customs, or events beyond our control.</p>
+      <div class="highlight-box">
+        <p><i class="fas fa-info-circle"></i> <strong>Free standard shipping</strong> on orders over $150 (domestic only). Express shipping available at checkout.</p>
+      </div>
+
+      <h2><i class="fas fa-undo-alt"></i> 5. Returns & Exchanges</h2>
+      <p>We want you to love your Zyvo items. If you’re not satisfied, you may return unused items within 30 days of delivery for a refund or exchange. Items must be in original condition with tags attached.</p>
+      <ul>
+        <li>Return shipping costs are the responsibility of the customer unless the item is defective.</li>
+        <li>Refunds are processed to the original payment method within 7–10 business days after we receive the return.</li>
+      </ul>
+
+      <h2><i class="fas fa-copyright"></i> 6. Intellectual Property</h2>
+      <p>All content on the Zyvo Platform — including logos, designs, text, graphics, and software — is the property of Zyvo or its licensors and is protected by copyright and trademark laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+
+      <h2><i class="fas fa-exclamation-triangle"></i> 7. Limitation of Liability</h2>
+      <p>Zyvo is provided on an “as is” and “as available” basis. To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the Platform or purchase of products.</p>
+      <p>Our total liability to you for any claim arising from these terms or your use of the Platform shall not exceed the amount you paid to Zyvo in the last 12 months.</p>
+
+      <h2><i class="fas fa-gavel"></i> 8. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes shall be resolved exclusively in the state or federal courts located in San Francisco, CA.</p>
+
+      <h2><i class="fas fa-pen-fancy"></i> 9. Changes to Terms</h2>
+      <p>Zyvo reserves the right to update these Terms at any time. We will notify you of material changes via email or by posting a notice on the Platform. Your continued use after such changes constitutes your acceptance of the new Terms.</p>
+
+      <div class="small-note">
+        <i class="fas fa-envelope" style="margin-right: 8px;"></i> For any questions about these Terms, please contact us at <strong>legal@zyvo.com</strong> or visit our <a href="#" style="color:#6c5ce7;">Help Center</a>.
+      </div>
+
+    </div>
+
+    <!-- footer (same as home) -->
+    <footer class="footer">
+      <div>
+        <span class="brand-small">Zyvo</span> <span style="margin-left: 12px; opacity: 0.7;">© 2026 — all rights reserved</span>
+      </div>
+      <div>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end container -->
+</body>
+</html>

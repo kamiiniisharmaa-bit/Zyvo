@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyvo · ecom home</title>
+  <!-- Font Awesome for icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #fafafc;
+      color: #1e1e2a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- header / nav ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      background: #2a2a3a;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(145deg, #1e1e2a, #3d3d5c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      color: #2c2c3e;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #6c5ce7;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-actions i {
+      font-size: 1.3rem;
+      color: #2c2c3e;
+      cursor: default;
+    }
+
+    .badge {
+      background: #6c5ce7;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 30px;
+      margin-left: -8px;
+      font-weight: 600;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0 50px;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1 1 380px;
+    }
+
+    .hero-text .tag {
+      display: inline-block;
+      background: #eae6ff;
+      color: #4a3db8;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 18px;
+      border-radius: 40px;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #4a4a5e;
+      max-width: 440px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background: #1e1e2a;
+      color: white;
+      border: none;
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: default;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-primary i {
+      margin-left: 8px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #d0d0dd;
+      padding: 14px 34px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #1e1e2a;
+      cursor: default;
+      transition: 0.2s;
+    }
+
+    .btn-outline i {
+      margin-right: 8px;
+    }
+
+    .hero-image {
+      flex: 1 1 380px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      background: #f0edf9;
+    }
+
+    /* ---------- features / categories ---------- */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 48px 0 24px;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: #6c5ce7;
+      font-size: 1.8rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid #f0eff5;
+      transition: 0.2s;
+    }
+
+    .category-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 30px;
+      margin-bottom: 12px;
+      background: #f3f1fb;
+    }
+
+    .category-card h4 {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .category-card p {
+      color: #6e6e86;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- product grid ---------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin: 20px 0 50px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      padding: 20px 16px 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eeedf5;
+      transition: 0.2s;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 20px;
+      background: #f5f3fe;
+      margin-bottom: 12px;
+    }
+
+    .product-card h4 {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .product-card .price {
+      font-weight: 700;
+      color: #2a2a3a;
+      margin: 6px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .product-card .price small {
+      font-weight: 400;
+      color: #8888a0;
+      font-size: 0.75rem;
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+
+    .rating {
+      color: #f5b342;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .rating span {
+      color: #6e6e86;
+      font-size: 0.8rem;
+      margin-left: 6px;
+    }
+
+    /* ---------- banner / promo ---------- */
+    .promo-banner {
+      background: linear-gradient(135deg, #1e1e2a, #2d2d44);
+      border-radius: 40px;
+      padding: 40px 44px;
+      margin: 30px 0 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .promo-banner h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .promo-banner p {
+      opacity: 0.8;
+      margin-top: 6px;
+      font-size: 1.05rem;
+    }
+
+    .promo-banner .btn-light {
+      background: white;
+      color: #1e1e2a;
+      border: none;
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: default;
+    }
+
+    .promo-banner .btn-light i {
+      margin-left: 10px;
+    }
+
+    /* ---------- footer ---------- */
+    .footer {
+      border-top: 1px solid #e4e4ef;
+      padding: 30px 0 20px;
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #4f4f68;
+    }
+
+    .footer .brand-small {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.3px;
+      color: #1e1e2a;
+    }
+
+    .footer i {
+      margin: 0 8px;
+      font-size: 1.2rem;
+      color: #3d3d5c;
+    }
+
+    /* ---------- responsive tweaks ---------- */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .nav-actions {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+      }
+
+      .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- header -->
+    <header>
+      <nav class="navbar">
+        <div class="logo-area">
+          <div class="logo-icon">Z</div>
+          <span class="brand">Zyvo</span>
+        </div>
+        <div class="nav-links">
+         <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-actions">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge">3</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag"><i class="fas fa-bolt" style="margin-right: 6px;"></i> new drop</span>
+        <h1>Elevate your <br /><span>everyday</span> style</h1>
+        <p>Discover the Zyvo edit — curated essentials with a modern edge. Fresh looks, timeless quality.</p>
+        <div class="hero-buttons">
+          <span class="btn-primary">Explore now <i class="fas fa-arrow-right"></i></span>
+          <span class="btn-outline"><i class="fas fa-play"></i> How it works</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- working image: unsplash + transparent abstract product vibe -->
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=600&fit=crop&crop=center&auto=format" alt="Zyvo hero product" />
+      </div>
+    </section>
+
+    <!-- categories / features -->
+    <div class="section-title">
+      <i class="fas fa-th-large"></i> Shop by category
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=120&h=120&fit=crop&crop=center&auto=format" alt="men" />
+        <h4>Men</h4>
+        <p>152 items</p>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=120&h=120&fit=crop&crop=center&auto=format" alt="women" />
+        <h4>Women</h4>
+        <p>208 items</p>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=120&h=120&fit=crop&crop=center&auto=format" alt="accessories" />
+        <h4>Accessories</h4>
+        <p>86 items</p>
+      </div>
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=120&h=120&fit=crop&crop=center&auto=format" alt="shoes" />
+        <h4>Footwear</h4>
+        <p>64 items</p>
+      </div>
+    </div>
+
+    <!-- featured products -->
+    <div class="section-title">
+      <i class="fas fa-star" style="color: #f5b342;"></i> Bestsellers
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop&crop=center&auto=format" alt="sneaker" />
+        <h4>Air Zyvo 1</h4>
+        <div class="price">$129 <small>$159</small></div>
+        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span>(84)</span></div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=400&h=400&fit=crop&crop=center&auto=format" alt="bag" />
+        <h4>Canvas tote</h4>
+        <div class="price">$49</div>
+        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(127)</span></div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=400&h=400&fit=crop&crop=center&auto=format" alt="jacket" />
+        <h4>Oversized jacket</h4>
+        <div class="price">$189 <small>$219</small></div>
+        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>(43)</span></div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&crop=center&auto=format" alt="watch" />
+        <h4>Minimal watch</h4>
+        <div class="price">$79</div>
+        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span>(61)</span></div>
+      </div>
+    </div>
+
+    <!-- promo banner -->
+    <div class="promo-banner">
+      <div>
+        <h2>Fresh summer edit</h2>
+        <p>Up to 40% off on selected styles · limited time</p>
+      </div>
+      <span class="btn-light">Shop sale <i class="fas fa-arrow-right"></i></span>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div>
+        <span class="brand-small">Zyvo</span> <span style="margin-left: 12px; opacity: 0.7;">© 2026 — all rights reserved</span>
+      </div>
+      <div>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-tiktok"></i>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end container -->
+</body>
+</html>
